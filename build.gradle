@@ -18,7 +18,7 @@ repositories {
 }
 
 ext {//gradle의 확장 속성(메타 데이터, 전역 변수) 정의. 전체 프로젝트에서 사용할 수 있다. def는 Groovy의 단순한 변수 선언 키워드로 선언해 둔 빌드 스크립트 내에서만 사용 가능하다.
-    set('springCloudVersion', "2023.0.1")
+    set('springCloudVersion', "2023.0.2")
 }
 
 dependencies {
