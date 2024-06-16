@@ -1,0 +1,21 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sYrongK/cloud-config-repository
+          username: sYrongK
+          password: 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
+          default-label: develop
+#        vault:
+#          host: 127.0.0.1
+#          port: 8200
+#          kv-version: 2
+#          authentication: token
+#          token: hvs.6rcq8DL2dCoXQYVwcYuVVmOK
+#          backend: local
