@@ -7,11 +7,11 @@ spring:
   cloud:
     config:
       server:
-        git:
+        git: # git ??? jdbc database, hashicort vault, ?? ??? ? ?? ??? ??? ??? ? ??.
           uri: https://github.com/sYrongK/cloud-config-repository
           username: sYrongK
           password: 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
-          default-label: develop
+          default-label: develop # default: master
 #        vault:
 #          host: 127.0.0.1
 #          port: 8200
