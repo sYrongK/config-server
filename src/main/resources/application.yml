@@ -7,15 +7,26 @@ spring:
   cloud:
     config:
       server:
-        git: # git ??? jdbc database, hashicort vault, ?? ??? ? ?? ??? ??? ??? ? ??.
+        git: # git 외에도 jdbc database, hashicort vault 등 설정할 수 있다.
           uri: https://github.com/sYrongK/cloud-config-repository
           username: sYrongK
           password: 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
           default-label: develop # default: master
-#        vault:
-#          host: 127.0.0.1
-#          port: 8200
-#          kv-version: 2
-#          authentication: token
-#          token: hvs.6rcq8DL2dCoXQYVwcYuVVmOK
-#          backend: local
+        vault:
+          host: 127.0.0.1
+          port: 8200
+          kv-version: 2
+          authentication: token
+          token: root
+          backend: syrongk # 연결할 vault secret engine 이름
+          profile-separator: ',' # path 구분자
+#    bus:
+#      enabled: true
+
+logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level] %logger[%method:%line] - %msg%n"
+  level:
+    org.springframework.cloud.vault: DEBUG
+    org.springframework.cloud.config: DEBUG
+

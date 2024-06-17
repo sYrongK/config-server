@@ -45,6 +45,11 @@ dependencyManagement {//종속성 버전 관리를 중앙에서 하고 싶을 �
     }
 }
 
+def profiles = 'local,git,vault'
+bootRun {
+    args = ["--spring.profiles.active=" + profiles]
+}
+
 test {
     useJUnitPlatform()
 }
